@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <t t-name="odoo_calculator.odoo_calc_back">
+        <div class="o_preview_info">
+        <form t-name="CalclProbc" name="probcCalcform" method="POST" aria-atomic="true">
+<!--            <div class="container o_form_view mt-8 mb-8" style="background-color:#f3f3f3;">-->
+            <div class="container mt-8 mb-8" style="background-color:#f3f3f3;">
+                <div class="col-md-12 row ml-0" role="toolbar" aria-label="Main actions">
+                    <input type="text" name="calcinput" class="o_input calc_input_val" t-att-value="CalcInputVal" style="color:#008784;"/>
+                </div>
+                <div class="o_form_buttons_view col-md-12 row ml-0" role="toolbar" aria-label="Main actions">
+                    <input type="button" value="AC" class="btn btn-secondary o_prob_button_reset col-md-3 mt-3 pull-right" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="&#8592;" class="btn btn-secondary o_prob_button_erase col-md-3 mt-3 pull-right fa-user" style="color:#008784;font-size: 16pt;"/>
+                    <input type="button" value="%" class="btn btn-secondary o_prob_button_percent col-md-3 mt-3 pull-right" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="&#8730;" class="btn btn-secondary o_prob_button_sqrt col-md-3 mt-3 pull-right fa-user" style="color:#008784;font-weight: bolder;"><i class="fas fa-square-root"></i></input>
+                </div>
+                <div class="o_form_buttons_view col-md-12 row  ml-0" role="toolbar" aria-label="Main actions">
+                    <input type="button" value="7" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="8" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="9" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="/" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                </div>
+                <div class="o_form_buttons_view col-md-12 row ml-0" role="toolbar" aria-label="Main actions">
+                    <input type="button" value="4" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="5" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="6" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="*" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                </div>
+                <div class="o_form_buttons_view col-md-12 row ml-0" role="toolbar" aria-label="Main actions">
+                    <input type="button" value="1" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="2" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="3" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="-" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                </div>
+                <div class="col-md-12 row ml-0" role="toolbar" aria-label="Main actions">
+                    <input type="button" value="0" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="." class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="=" class="btn btn-secondary o_prob_button_result col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                    <input type="button" value="+" class="btn btn-secondary o_prob_button_input col-md-3 mt-3" style="color:#008784;font-weight: bolder;"/>
+                </div>
+            </div>
+        </form>
+        </div>
+    </t>
+
+    <t t-name="odoo.systray.Calculator">
+<!--        <li class="o_calc_systray_probc_item">-->
+        <li class="o_calc_systray_probc_item dropdown o-dropdown--no-caret">
+            <a class="dropdown-toggle o-no-caret" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" title="Calculator" href="#" role="button">
+                <i class="fa fa-calculator" role="img" aria-label="Calculator"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" role="menu" style="background-color:#f3f3f3;">
+                <div class="o_systray_calc_probc" style="width:300px;background-color:#8c1b1b;"/>
+            </div>
+        </li>
+    </t>
+
+    <t t-name="odoo.systray.Calculator.Previews">
+        <t t-call="odoo_calculator.odoo_calc_back"/>
+    </t>
+
+</templates>
